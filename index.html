@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" type="text/css" href="external file/bootstrap.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+
+<link rel="stylesheet" type="text/css" href="
+https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<style type="text/css">
+
+*{
+margin: 0;
+padding: 0;
+color: #f2f5f7;
+font-family: sans-serif;
+letter-spacing: 1px; //gap between each letter
+font-weight: 300;
+}
+body{
+overflow-x: hidden;
+background-color: #16151f;
+color: white;
+scroll-behavior: smooth;
+}
+
+
+nav{
+height: 12vh;
+width: 100vw;
+background-color: #131418;
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+display: flex;
+position: fixed;
+z-index: 10;
+}
+.logo{
+padding:1vh 1vw;
+text-align: center;
+}
+.logo img {
+height: 10vh;
+width: 15vw;}
+
+.nav-links{
+display: flex;
+list-style: none;
+width: 88vw;
+padding: 0 0.7vw;
+justify-content: space-evenly;
+align-items: center;
+text-transform: uppercase;
+color: #fff;
+}
+.nav-links li a{
+text-decoration: none;
+margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+color: #61DAFB;
+}
+.nav-links li {
+position: relative;
+}
+.nav-links li a::before {
+content: "";
+display: block;
+height: 3px;
+width: 0%;
+background-color: #61DAFB;
+position: absolute;
+transition: all ease-in-out 250ms;
+margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+width: 80%;
+}
+.login-button{
+background-color: transparent;
+border: 1.5px solid #f2f5f7;
+border-radius: 2em;
+padding: 2vh 2vw;
+margin-left: 2vw;
+font-size: 1rem;
+cursor: pointer;
+}
+.login-button:hover {
+color: #131418;
+background-color: #f2f5f7;
+border:1.5px solid #f2f5f7;
+transition: all ease-in-out 350ms;
+}
+.join-button{
+color: #131418;
+background-color: #61DAFB;
+border: 1.5px solid #61DAFB;
+border-radius: 2em;
+padding: 2vh 2vw;
+font-size: 1rem;
+cursor: pointer;
+}
+.join-button:hover {
+color: #f2f5f7;
+background-color: transparent;
+border:1.5px solid #f2f5f7;
+transition: all ease-in-out 350ms;
+}
+.hamburger div{
+width: 30px;
+height:3px;
+background: #f2f5f7;
+margin: 5px;
+transition: all 0.3s ease;
+}
+.hamburger{
+display: none;
+}
+
+
+
+@media screen and (max-width: 800px){
+nav{
+position: fixed;
+z-index: 3;
+}
+.hamburger{
+display:block;
+position: absolute;
+cursor: pointer;
+right: 5%;
+top: 50%;
+transform: translate(-5%, -50%);
+z-index: 2;
+transition: all 0.7s ease;
+}
+.nav-links{
+position: fixed;
+background: #131418;
+height: 100vh;
+width: 100%;
+flex-direction: column;
+clip-path: circle(50px at 90% -20%);
+-webkit-clip-path: circle(50px at 90% -10%);
+transition: all 1s ease-out;
+pointer-events: none;
+}
+.nav-links.open{
+clip-path: circle(1000px at 90% -10%);
+-webkit-clip-path: circle(1000px at 90% -10%);
+pointer-events: all;
+}
+.landing{
+flex-direction: column;
+}
+.nav-links li{
+opacity: 0;
+}
+.nav-links li:nth-child(1){
+transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2){
+transition: all 0.5s ease 0.4s;
+}
+.nav-links li:nth-child(3){
+transition: all 0.5s ease 0.6s;
+}
+.nav-links li:nth-child(4){
+transition: all 0.5s ease 0.7s;
+}
+.nav-links li:nth-child(5){
+transition: all 0.5s ease 0.8s;
+}
+.nav-links li:nth-child(6){
+transition: all 0.5s ease 0.9s;
+margin: 0;
+}
+.nav-links li:nth-child(7){
+transition: all 0.5s ease 1s;
+margin: 0;
+}
+li.fade{
+opacity: 1;
+}
+}
+.toggle .line1{
+transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+transition: all 0.7s ease;
+width:0;
+}
+.toggle .line3{
+transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+.container{
+
+	padding-top: 100px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+
+
+        .gfg { 
+            margin: 3%; 
+            position: relative; 
+        } 
+  
+        .first-txt { 
+            position: absolute; 
+            top: 17px; 
+            left: 50px; 
+            font-size: 4vw;
+            padding-left: 20px;
+        } 
+  
+        .second-txt { 
+            position: relative; 
+            bottom: 160px; 
+            left: 5px;
+            font-size: 2vw; 
+        } 
+
+
+
+.intro{
+
+ width: 100%;
+  max-width: 1400px;
+  height: auto;
+
+}
+
+
+
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}
+
+
+
+
+
+
+.ml14 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml14 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml14 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml14 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.7vw;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1edff; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #61DAFB; 
+}
+
+
+
+.flex-center {
+  width: 100%;
+  min-height: 50vh;
+  background: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-3d {
+  padding: 30px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #fff;
+}
+.icon-3d:hover {
+  -webkit-animation: icon3d 200ms infinite;
+  animation: icon3d 200ms infinite;
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+  }
+  25% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+  }
+  50% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+  }
+  75% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+  }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+  }
+}
+
+.signature{
+
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+<!--topnav start-->
+<nav>
+ <div class="logo">
+  <img src="logo trans.png" alt="">
+ </div>
+ <ul class="nav-links" li style="color: white">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Tabs & Chords</a></li>
+  <li><a href="#">Guitar Lessons</a></li>
+  <li><a href="#">Library</a></li>
+  <li><a href="#">Buy</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li><button class="login-button" href="#">Login</button></li>
+  <li><button class="join-button" href="#">Join</button></li>
+ </ul>
+</nav>
+
+<!--topnav end-->
+<!--topnav btn start-->
+
+<nav>
+ <div class="logo">
+  <img src="logo trans.png" alt="">
+ </div>
+ <div class="hamburger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+ </div>
+ <ul class="nav-links">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Tabs & Chords</a></li>
+  <li><a href="#">Guitar Lessons</a></li>
+  <li><a href="#">Library</a></li>
+  <li><a href="#">Buy</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li><button class="login-button" href="#">Login</button></li>
+  <li><button class="join-button" href="#">Join</button></li>
+ </ul>
+</nav>
+
+<!--topnav btn end-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid" style="padding-top: 80px">
+ 
+
+<h1 class="ml7">
+  <span class="text-wrapper">
+    <span class="letters">Some Basic & Easy Songs :-)</span>
+  </span>
+</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+<div class="item" data-aos="fade-down">
+
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner row w-100 mx-auto">
+      <div class="carousel-item col-md-4 active">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Shaayad (Love Aaj Kal 2)</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Nothing Else Matters</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Main Suneya (Ammy Virk)</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Filhall (B Praak)</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Aadat (Jal Band)</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Roses For the Dead</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item col-md-4">
+        <div class="card">
+          <img class="card-img-top img-fluid" src="bg1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title" style="color: #16151F">Sweet Child 'O' Mine</h4>
+            <p class="card-text" style="color: #16151F">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+<!--effect--></div>
+
+
+
+
+
+
+<!--content-->
+<div class="container">
+
+<h1 class="ml14">
+  <span class="text-wrapper">
+    <span class="letters" style="font-size: 3.7vw">About Me :-)</span>
+    <span class="line"></span>
+  </span>
+</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+
+
+<div class="item" data-aos="fade-up">
+
+
+<div class="gfg"> 
+        <img src="vedant pro.jpg" class="intro" width="600" height="400" style="opacity: 0.5"> 
+        <h1 class="first-txt" style="font-size: 4vw"> 
+            Vedant Dixit 
+        </h1> 
+          
+        <h3 class="second-txt"> <div class="item" data-aos="fade-right">
+            Vedant Dixit is a pro guitarist and practicing guitar from more than 6 years.
+            He is also a Website Developer and a Programmer too. And this Website is also  made by him only. So Enjoy This Website and take a full tour of it and it really gives a very huge advantage to you.
+            So, at last Best Wishes from Me.
+            Take care, Good Luck :-) </div>
+        </h3> 
+    </div> 
+
+
+<!--fadeup--></div>
+
+<img class="signature" src="signature.png" style="max-width: 100%">
+
+
+
+
+
+
+<div class="flex-center">
+  <a href="https://youtube.com/channel/UCyIukLEhD04oM8qXGJkLEDg"><i class="fa fa-youtube fa-4x icon-3d"></i></a>
+   <a href="https://instagram.com/guitarer_vedant"><i class="fa fa-instagram fa-4x icon-3d"></i></a>
+    <a href="https://facebook.com/vedantplaysguitar"><i class="fa fa-facebook fa-4x icon-3d"></i></a>
+  <a href="https://twitter.com/vedantd2004"><i class="fa fa-twitter fa-4x icon-3d"></i></a>
+ 
+ 
+  <a href="https://t.me/hindustaniguitarist"><i class="fa fa-telegram fa-4x icon-3d"></i></a>
+  <a href="#"><i class="fa fa-snapchat fa-4x icon-3d"></i></a>
+  <a href="#"><i class="fa fa-whatsapp fa-4x icon-3d"></i></a>
+ 
+</div>
+
+
+
+<script>(function(w, d) { w.CollectId = "5fa2747ce9153d4e36fffaff"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!--content ends-->
+
+<script type="text/javascript">
+	
+
+//topnav starts
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+hamburger.addEventListener('click', ()=>{
+//Animate Links
+navLinks.classList.toggle("open");
+links.forEach(link => {
+link.classList.toggle("fade");
+});
+//Hamburger Animation
+hamburger.classList.toggle("toggle");
+});
+
+//topnav ends
+
+
+$(document).ready(function() {
+  $("#myCarousel").on("slide.bs.carousel", function(e) {
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $(".carousel-item").length;
+
+    if (idx >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i = 0; i < it; i++) {
+        // append slides to end
+        if (e.direction == "left") {
+          $(".carousel-item")
+            .eq(i)
+            .appendTo(".carousel-inner");
+        } else {
+          $(".carousel-item")
+            .eq(0)
+            .appendTo($(this).find(".carousel-inner"));
+        }
+      }
+    }
+  });
+});
+
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml14 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml14 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeInOutExpo",
+    duration: 900
+  }).add({
+    targets: '.ml14 .letter',
+    opacity: [0,1],
+    translateX: [40,0],
+    translateZ: 0,
+    scaleX: [0.3, 1],
+    easing: "easeOutExpo",
+    duration: 800,
+    offset: '-=600',
+    delay: (el, i) => 150 + 25 * i
+  }).add({
+    targets: '.ml14',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml7',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+AOS.init({
+  duration: 1200,
+})
+
+
+
+
+
+</script>
+</body>
+</html>

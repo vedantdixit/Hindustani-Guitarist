@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy Electric Guitar | Hindustani Guitarist</title>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+
+<style type="text/css">
+
+*{
+margin: 0;
+padding: 0;
+color: #f2f5f7;
+font-family: sans-serif;
+letter-spacing: 1px; //gap between each letter
+font-weight: 300;
+}
+body{
+overflow-x: hidden;
+background-color: #16151f;
+color: white;
+scroll-behavior: smooth;
+}
+
+
+nav{
+height: 12vh;
+width: 100vw;
+background-color: #131418;
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+display: flex;
+position: fixed;
+z-index: 10;
+
+}
+.logo{
+padding:1vh 1vw;
+text-align: center;
+}
+.logo img {
+height: 10vh;
+width: 15vw;}
+
+.nav-links{
+display: flex;
+list-style: none;
+width: 88vw;
+padding: 0 0.7vw;
+justify-content: space-evenly;
+align-items: center;
+text-transform: uppercase;
+color: white;
+}
+.nav-links li a{
+text-decoration: none;
+margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+color: #61DAFB;
+}
+.nav-links li {
+position: relative;
+}
+.nav-links li a::before {
+content: "";
+display: block;
+height: 3px;
+width: 0%;
+background-color: #61DAFB;
+position: absolute;
+transition: all ease-in-out 250ms;
+margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+width: 80%;
+}
+.login-button{
+background-color: transparent;
+border: 1.5px solid #f2f5f7;
+border-radius: 2em;
+padding: 2vh 2vw;
+margin-left: 2vw;
+font-size: 1rem;
+cursor: pointer;
+}
+.login-button:hover {
+color: #131418;
+background-color: #f2f5f7;
+border:1.5px solid #f2f5f7;
+transition: all ease-in-out 350ms;
+}
+.join-button{
+color: #131418;
+background-color: #61DAFB;
+border: 1.5px solid #61DAFB;
+border-radius: 2em;
+padding: 2vh 2vw;
+font-size: 1rem;
+cursor: pointer;
+}
+.join-button:hover {
+color: #f2f5f7;
+background-color: transparent;
+border:1.5px solid #f2f5f7;
+transition: all ease-in-out 350ms;
+}
+.hamburger div{
+width: 30px;
+height:3px;
+background: #f2f5f7;
+margin: 5px;
+transition: all 0.3s ease;
+}
+.hamburger{
+display: none;
+}
+
+
+
+@media screen and (max-width: 800px){
+nav{
+position: fixed;
+z-index: 3;
+}
+.hamburger{
+display:block;
+position: absolute;
+cursor: pointer;
+right: 5%;
+top: 50%;
+transform: translate(-5%, -50%);
+z-index: 2;
+transition: all 0.7s ease;
+}
+.nav-links{
+position: fixed;
+background: #131418;
+height: 100vh;
+width: 100%;
+flex-direction: column;
+clip-path: circle(50px at 90% -20%);
+-webkit-clip-path: circle(50px at 90% -10%);
+transition: all 1s ease-out;
+pointer-events: none;
+}
+.nav-links.open{
+clip-path: circle(1000px at 90% -10%);
+-webkit-clip-path: circle(1000px at 90% -10%);
+pointer-events: all;
+}
+.landing{
+flex-direction: column;
+}
+.nav-links li{
+opacity: 0;
+}
+.nav-links li:nth-child(1){
+transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2){
+transition: all 0.5s ease 0.4s;
+}
+.nav-links li:nth-child(3){
+transition: all 0.5s ease 0.6s;
+}
+.nav-links li:nth-child(4){
+transition: all 0.5s ease 0.7s;
+}
+.nav-links li:nth-child(5){
+transition: all 0.5s ease 0.8s;
+}
+.nav-links li:nth-child(6){
+transition: all 0.5s ease 0.9s;
+margin: 0;
+}
+.nav-links li:nth-child(7){
+transition: all 0.5s ease 1s;
+margin: 0;
+}
+li.fade{
+opacity: 1;
+}
+}
+.toggle .line1{
+transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+transition: all 0.7s ease;
+width:0;
+}
+.toggle .line3{
+transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.container{
+
+  padding-top: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4.5em;
+  color: #402d2d;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: #402d2d;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+
+
+.responsive-img {
+  width: 80%;
+  height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  pa
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropbtn {
+  background-color: #131418;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  transition: 0.5s ease;
+  text-align: center;
+
+}
+
+a{
+
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropbtn:hover{
+
+background-color: #61DAFB;  
+  
+
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {background-color: #61DAFB;}
+
+
+
+iframe{
+  top: 50%;
+}
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<!--topnav start-->
+<nav>
+ <div class="logo">
+  <img src="logo new.png" alt="">
+ </div>
+ <ul class="nav-links" li style="color: white">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#">Tabs & Chords</a></li>
+  <li><a href="#">Guitar Lessons</a></li>
+  <li><a href="library.html">Library</a></li>
+  <li><a href="buy.html">Buy</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li><button class="login-button" href="#">Login</button></li>
+  <li><button class="join-button" href="#">Join</button></li>
+ </ul>
+</nav>
+
+<!--topnav end-->
+<!--topnav btn start-->
+
+<nav>
+ <div class="logo">
+  <img src="logo new.png" alt="">
+ </div>
+ <div class="hamburger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+ </div>
+ <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="#">Tabs & Chords</a></li>
+  <li><a href="#">Guitar Lessons</a></li>
+  <li><a href="library.html">Library</a></li>
+  <li><a href="buy.html">Buy</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li><button class="login-button" href="#">Login</button></li>
+  <li><button class="join-button" href="#">Join</button></li>
+ </ul>
+</nav>
+
+<!--topnav btn end-->
+
+<div class="container">
+
+<h1 class="ml6">
+  <span class="text-wrapper">
+    <span class="letters">Buy Electric Guitar :-)</span>
+  </span>
+</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+
+
+
+
+
+
+
+ <button class="dropbtn"><a href = "acoustic.html">Acoustic Guitar</a></button>
+
+  <button class="dropbtn"><a href = "electric.html">Electric Guitar</a></button>
+<button class="dropbtn"><a href = "classical.html">Classical Guitar</a></button>
+<div class="dropdown">
+  <button class="dropbtn">Accessories +</button>
+  <div class="dropdown-content">
+    <a href="picks.html">Picks</a>
+    <a href="capo.html">Capo</a>
+    <a href="strap.html">Strap</a>
+    <a href="cable.html">Cables</a>
+    <a href="more.html">More</a> 
+  </div>
+</div>
+
+<button class="dropbtn"><a href = "amp.html">Guitar Amplifiers</a></button>
+<div class="dropdown">
+  <button class="dropbtn">Pickups +</button>
+  <div class="dropdown-content">
+    <a href="ac pic.html">Acoustic Guitar Pickups</a>
+    <a href="ec pic.html">Electric Guitar Pickups</a>
+  </div>
+</div>
+<button class="dropbtn"><a href = "processors.html">Guitar Processors</a></button>
+<button class="dropbtn"><a href = "pedals.html">Effect Pedals</a></button>
+
+<div class="dropdown">
+<button class="dropbtn">Audio Recording +</button>
+  <div class="dropdown-content">
+    <a href="audio interface.html">Audio Interface</a>
+    <a href="monitors.html">Monitors</a>
+    <a href="more ad.html">More</a> 
+  </div>
+</div>
+
+
+
+<div style="padding-top: 50px"></div>
+
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B08545FGNC&asins=B08545FGNC&linkId=b40112a6095e1d485740a3e153c9da7c&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B06Y3ZRR1Q&asins=B06Y3ZRR1Q&linkId=967de814be5af227b6d2be00e643ef77&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B01G26RAV2&asins=B01G26RAV2&linkId=2d03806118558ac04be0a20097e788ac&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07TG9F8SL&asins=B07TG9F8SL&linkId=9b0730a89662304200717ecb548ef850&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B06Y42YRJL&asins=B06Y42YRJL&linkId=a8468510fe580b7397d52e12c2dcc708&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B000MLY7XS&asins=B000MLY7XS&linkId=64c15b944671bcf5084c8d3c21360ffb&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B015XQ8WLE&asins=B015XQ8WLE&linkId=bbd2bfcf0ee2f4c24fd1d2b1f898d58f&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B009OAA2U0&asins=B009OAA2U0&linkId=147210bc70e84c18c9057639c3f30372&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B005K9TV8S&asins=B005K9TV8S&linkId=79b238f3e4ac61cb41bf1afc4ed7f156&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07NDXQJ2N&asins=B07NDXQJ2N&linkId=e577bde8f2e2fa966d7c0ff0ecb2a82e&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07CNDDCG8&asins=B07CNDDCG8&linkId=2f37b5c6c808b64263de3a49e4dcbfe0&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B0171NPNYQ&asins=B0171NPNYQ&linkId=1ebfa51f44e5a415fd14b798031879c9&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B075BVT6Q1&asins=B075BVT6Q1&linkId=71d7eb155e9013392c356425eba205db&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B079GPSST7&asins=B079GPSST7&linkId=8494d3fe970e73fb0fb33c76e1fbee9e&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B08545FGNC&asins=B08545FGNC&linkId=34a77842ad500c0939857211e0431fca&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07NDXQJ2N&asins=B07NDXQJ2N&linkId=04becbd67f572bf90ddf7d2aa9312bdc&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00S8JURJE&asins=B00S8JURJE&linkId=6c832cbd8fc21f65a677dece8d7f9e26&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B075BVPLDB&asins=B075BVPLDB&linkId=f4da5a398e2499639afede97c84cd125&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B005WPU8ZK&asins=B005WPU8ZK&linkId=390e21cb4d02528adc948c2d47ca4e57&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B084KTM8YW&asins=B084KTM8YW&linkId=cfdfee321ba86cca48885e517cfa35f5&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07BLNHNC6&asins=B07BLNHNC6&linkId=38461fb4db0068910115ff3ba6d6b5b5&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B071YF4P7D&asins=B071YF4P7D&linkId=3d536a671f602a5ccdbe72a676a88864&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B000XXO7B2&asins=B000XXO7B2&linkId=cc8eab1222211fc619d2f2ed66c10416&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B01G26RAV2&asins=B01G26RAV2&linkId=b209511c7685e9e2b27eadf142fae06d&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B01DAE5Q60&asins=B01DAE5Q60&linkId=e6a9896b1467a41ee3f32ff6121a4ca3&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07P6XT558&asins=B07P6XT558&linkId=ab3052a4c9f8b9a80b65bd484ec5c3b8&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07JMQ1FY3&asins=B07JMQ1FY3&linkId=85bdaee3b74e2fa271f84928b343d817&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B08FFVJHNJ&asins=B08FFVJHNJ&linkId=f95e827a95ae81cf13bcd79a6ee9ec61&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B06XCY7Q57&asins=B06XCY7Q57&linkId=27a8ccde794672258e42226ee209b211&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B0064RVAUC&asins=B0064RVAUC&linkId=80fdfc513f86fa3dbc7ea196580a64c4&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00Q8PH2YI&asins=B00Q8PH2YI&linkId=1ec6854fd54b8c77a3f39bed3ff94f4e&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07KSY4MZ4&asins=B07KSY4MZ4&linkId=b0afb6b74cc58a94f73a638a686ba2d6&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B0002E1IOQ&asins=B0002E1IOQ&linkId=3770ef88c9da15762a0f647f644bd4ac&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07V4QFGMS&asins=B07V4QFGMS&linkId=3946cba96a70d8bd3ae4cedc37d53b93&show_border=true&link_opens_in_new_window=true"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B005WPU954&asins=B005WPU954&linkId=bbc8ebffdffec616941c79db3bce779b&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07B6N19XK&asins=B07B6N19XK&linkId=72de617c1209dc7612046262fca8a761&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00123DQT6&asins=B00123DQT6&linkId=8a72ee6f5c09ec4bb0dea934eb00aa41&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B01M5EPF5C&asins=B01M5EPF5C&linkId=bfda3c54e3b9806179f070be5e78c9c0&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00HZY6QH0&asins=B00HZY6QH0&linkId=dd4f5f0284cc0f1df04d0a395d30fdda&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07BBWKFR2&asins=B07BBWKFR2&linkId=b34764ef1be604ca6d0c12ff92d10734&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07V9NCCKY&asins=B07V9NCCKY&linkId=e62c182da20262d252d71de9ff42c997&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07T47X64T&asins=B07T47X64T&linkId=3a84feeb1039554463013d74d70afc59&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07T47WR9Z&asins=B07T47WR9Z&linkId=322f64952e140a59e49aaa838663d077&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07T91J6J7&asins=B07T91J6J7&linkId=5c5f4629b9d0cfae53a0eedb5cba1996&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07TDN617K&asins=B07TDN617K&linkId=bbf279ffb07d45bd34482257e1932999&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07T7H87KD&asins=B07T7H87KD&linkId=89698b0545ce1d37814a9ef7ef5859d6&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07TFR8XBR&asins=B07TFR8XBR&linkId=a6d5f00a4e7d075391989e5cde9f8306&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B0064RV6V0&asins=B0064RV6V0&linkId=731b123677df3cb36f3725d338485b7b&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00GXNRAG0&asins=B00GXNRAG0&linkId=ac58fb3fcaae9d585ebbfd934652a306&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07TK92Q9P&asins=B07TK92Q9P&linkId=cbd2f026c135975b765369b963e233b7&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07Q4WYF6B&asins=B07Q4WYF6B&linkId=a94170c3e0d8f5ed4abeef4da173d8d8&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07G4KQ1KK&asins=B07G4KQ1KK&linkId=14f707c39cba08b6b16d46fd1aa43042&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00G4SHFLO&asins=B00G4SHFLO&linkId=8d27748c3ec0948e24fff98fa4e735f5&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00838GSUC&asins=B00838GSUC&linkId=97eeacab4a89d7763b0e0b58ed1717a0&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B089B7CWHZ&asins=B089B7CWHZ&linkId=a8e9741caca265ab4feec03e02e69345&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07XGCN4VZ&asins=B07XGCN4VZ&linkId=304e7f12501da7a5c61b5dae38f85438&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07G55JVK1&asins=B07G55JVK1&linkId=6de86c24d71cc3fe60913b9876283bcc&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00LCRUAKU&asins=B00LCRUAKU&linkId=51fa131951719c927bc981ba36356ea6&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00PK70S5A&asins=B00PK70S5A&linkId=d0d5e5f3f077757455496a3e00103fe8&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07V4QFGMS&asins=B07V4QFGMS&linkId=1ce3f6455bbe553751306606a992401b&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B08FFVJHNJ&asins=B08FFVJHNJ&linkId=f8b27e9970bdb08d5c84559de565f60e&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B004TH4I0S&asins=B004TH4I0S&linkId=8f1b8f7c5ad7f17a59f06a6ab2a5ccac&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B01CPMCTW2&asins=B01CPMCTW2&linkId=bf41af71ab5058d441359af8a2611718&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B011RHXANS&asins=B011RHXANS&linkId=27f743590f36ce991a61fadb02b16cf7&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07RRH43SM&asins=B07RRH43SM&linkId=9c4014de2e9654de90ace3672c50f74f&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00PK7A7EC&asins=B00PK7A7EC&linkId=26a6f1d5f34e116a515088d805e9ef99&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B07RPFQ6QQ&asins=B07RPFQ6QQ&linkId=b1ccae2e518408e1adf2a53079573470&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B00GIH4U8W&asins=B00GIH4U8W&linkId=ea1300bf4601ac9c67291a2f53589948&show_border=true&link_opens_in_new_window=true"></iframe>
+
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vedantdixit20-21&language=en_IN&marketplace=amazon&region=IN&placement=B01FYZSOHG&asins=B01FYZSOHG&linkId=f92045212290e7d041722147acca0540&show_border=true&link_opens_in_new_window=true"></iframe>
+
+
+
+<!--container--></div>
+
+
+
+<script>
+
+
+
+//topnav starts
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+hamburger.addEventListener('click', ()=>{
+//Animate Links
+navLinks.classList.toggle("open");
+links.forEach(link => {
+link.classList.toggle("fade");
+});
+//Hamburger Animation
+hamburger.classList.toggle("toggle");
+});
+
+//topnav ends
+
+
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration:2000,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 10000
+  });
+
+
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 10000
+  });
+
+AOS.init({
+  duration: 1200,
+})
+</script>
+
+
+</body>
+</html>
